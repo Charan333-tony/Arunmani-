@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Arunmani</title>
+<style>
+
+*{
+  margin: 0px;
+  padding: 0px;
+  background-color: #995940;
+}
+
+.title{
+  border: #997040 5px solid;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 19%;
+  display: inline-block;
+  width: 200px;
+  background-color: #996930;
+}
+
+.para{
+  background-color: #996930;
+  border: #997040 7px solid;
+  border-radius: 20px;
+  display: inline-block;
+  height: 450px;
+  width: 300px;
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 10px;
+  padding-bottom: 5px;
+}
+
+.btn1{
+  display: inline;
+  background-color: #996930;
+  font-size: 20px;
+  border: #997040 4px solid;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-left: 33%;
+}
+
+.btn2, .btn3{
+  display: inline;
+  background-color: #996930;
+  font-size: 20px;
+  border: #997040 4px solid;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-left: 33%;
+}
+
+</style>
+</head>
+<body>
+<h1 class = "title">HELLO</h1>
+<div class = "par">
+<p class = "para" id = "hi">hello! hi, daa mani. how are you. i am fine and baaa baaaa baaa baaa baaa baaa baaa baaaa baaa   ba   baaa baaa baaa baaa baaaa baaaa baaa  aaa baa baa baaa ba import requestsAPI_KEY = "YOUR_OPENROUTER_API_KEY"url = "https://openrouter.ai/api/v1/chat/
+completions"headers = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}print("Ultra AI (type 'exit' to quit)")while True:user = input("You: ")if user.lower() == "exit":breakdata = {"model": "openai/gpt-4o-mini", "messages": [{ "role": "user","content": user } ]}response = requests.post(url, headers=headers, json=data)if response.status_code == 200:answer = response.json()["choices"][0]["message"]["content"]print("AI:", answer)else:print("Error:", response.status_code) print(response.text)</p>
+</div>
+<button class = "btn1"  onclick = "btn()">CLICK ME</button>
+<button class = "btn2" onclick = "btn2()">CLICK ME</button>
+<button class = "btn3" onclick = "btn3()" >CLICK ME</button>
+
+<script>
+
+var bt = document.getElementById("hi")
+
+function btn(){
+  alert("Hi! I am Charan, press the next button")
+}
+
+function btn2(){
+  bt.style.backgroundColor = "red"
+  alert("press next button to change a color")
+}
+
+function btn3(){
+  bt.style.backgroundColor = 996930
+}
+
+
+</script>
+</body>
+</html>
+
